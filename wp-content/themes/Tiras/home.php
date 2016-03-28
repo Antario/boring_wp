@@ -4,9 +4,6 @@
   */
 ?>
 <?php get_header(); ?>
-<h1 id="js-logo" class="logo" role="banner">
-  <a href="http://localhost:8080/wordpress/" data-pjax="true"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/white.svg" alt="Tiras Tec."></a>
-</h1>
 <main id="js-container" class="container" role="main">
   <div id="js-wrapper" class="wrapper page-home">
     <section id="js-intro" class="intro">
@@ -26,7 +23,7 @@
           </div>
           <div class="intro-second">
             <div class="hgroup">
-              <h1 class="js-text-split">Tiras Tec.</h1>
+              <h1 class="js-text-split">TIRAS TEC.</h1>
               <h2 class="js-text-split">To make new things like a first penguin</h2>
             </div>
           </div>
@@ -179,10 +176,10 @@
     <source src="<?php echo get_template_directory_uri(); ?>/video/Webbdagarna 2016-HD.webm">
     <source src="<?php echo get_template_directory_uri(); ?>/video/Webbdagarna 2016-HD.mp4">
   </video>
-  <div class="sp-video-poster-wrap">
+  <!--<div class="sp-video-poster-wrap">
     <div class="poster-1"></div>
     <div class="poster-2"></div>
-  </div>
+  </div>-->
   <div class="video-mask"></div>
 </div>
 <!--/ .video -->
@@ -191,7 +188,7 @@
   <div class="table">
     <div class="table-cell">
       <div class="not-support">
-        <div class="not-support-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/black.svg" alt="Tiras Tec."></div>
+        <div class="not-support-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_black_small.svg" alt="Tiras Tec."></div>
       </div>
     </div>
   </div>

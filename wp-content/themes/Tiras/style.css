@@ -7,6 +7,7 @@
 *Version:         1.0
 */
 @charset "utf-8";
+@import url(css/bootstrap.min.css);
 *,
 body {
     padding: 0;
@@ -257,9 +258,6 @@ a.works-detail-info-link {
 a.btn::after {
     content: "";
     }
-
-
-/*! sanitize.css (custom) | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 
 pre,
 textarea {
@@ -1545,7 +1543,7 @@ a.btn {
 
 .logo a {
     width: auto;
-    height: 40px;
+    height: 60px;
     -webkit-transition: width .35s cubic-bezier(.075, .82, .165, 1).45s;
     transition: width .35s cubic-bezier(.075, .82, .165, 1).45s;
     }

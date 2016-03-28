@@ -56,12 +56,15 @@
 		<?php wp_head(); ?>
   </head>
 	<body <?php body_class() ?>>
+	<h1 id="js-logo" class="logo" role="banner">
+	<a href="http://localhost:8080/wordpress/" data-pjax="true"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_white_small.svg" alt="Tiras Tec"></a>
+</h1>
 		<div id="js-gnav-wrap" class="gnav-wrap">
 			<div class="gnav-bg">
 				<div class="gnav-inner">
 					<div class="gnav-content">
 						<h1 class="gnav-logo">
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo/black.svg" alt="Tiras Tec.">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_black_small.svg" alt="Tiras Tec.">
 							<p>To make new things<br/>like a first penguin.</p>
 						</h1>
 						<nav id="js-gnav" class="gnav" role="navigation">

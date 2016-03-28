@@ -4,9 +4,6 @@
 	*/
 ?>
 <?php get_header(); ?>
-<h1 id="js-logo" class="logo" role="banner">
-	<a href="index.html" data-pjax="true"><img src="img/logo/white.svg" alt="Tiras Tec"></a>
-</h1>
 <main id="js-container" class="container" role="main">
 	<div id="js-wrapper" class="wrapper page-works">
 		<section id="js-works" class="works">
@@ -15,8 +12,8 @@
 					<div class="table-cell">
 						<div class="hgroup">
 							<span class="subpage-icon icon-layer"></span>
-							<h1 class="js-text-split">Works</h1>
-							<h2 class="js-text-split">портфоліо</h2>
+							<h1 class="js-text-split">Портфоліо</h1>
+							<h2 class="js-text-split">наші роботи</h2>
 						</div>
 					</div>
 					<a data-href="js-point" class="scroll-down"></a>
@@ -41,116 +38,59 @@
 				</div>
 			</header>
 			<section id="js-point" class="content-inner">
-				<nav id="js-wnav" class="wnav" role="navigation">
-					<ul class="works-filter">
-						<li class="works-filter-list is-active"  data-filter="*"><h4><p><span class="icon-layer"></span>All</p></h4></li>
-						<li class="works-filter-list" data-filter="website"><h4><p><span class="icon-desktop"></span>Website</p></h4></li>
-						<li class="works-filter-list" data-filter="apps"><h4><p><span class="icon-smartphone"></span>Apps</p></h4></li>
-						<li class="works-filter-list" data-filter="other"><h4><p><span class="icon-segment"></span>Other</p></h4></li>
-					</ul>
-					<div id="js-grid-changer" class="grid-changer grid-mode-1" data-mode="2">
-						<div class="grid-inner">
-							<span class="grid grid-1"></span>
-							<span class="grid grid-2"></span>
-							<span class="grid grid-3"></span>
-							<span class="grid grid-4"></span>
-							<span class="grid grid-5"></span>
-							<span class="grid grid-6"></span>
-							<span class="grid grid-7"></span>
-							<span class="grid grid-8"></span>
-							<span class="grid grid-9"></span>
-						</div>
-					</div>
-				</nav>
+<!--				<nav id="js-wnav" class="wnav" role="navigation">-->
+<!--					<ul class="works-filter">-->
+<!--						<li class="works-filter-list is-active"  data-filter="*"><h4><p><span class="icon-layer"></span>Всі роботи</p></h4></li>-->
+<!--						<li class="works-filter-list" data-filter="website"><h4><p><span class="icon-desktop"></span>Веб-сайти</p></h4></li>-->
+<!--						<li class="works-filter-list" data-filter="apps"><h4><p><span class="icon-smartphone"></span>Програми</p></h4></li>-->
+<!--						<li class="works-filter-list" data-filter="other"><h4><p><span class="icon-segment"></span>Інше</p></h4></li>-->
+<!--					</ul>-->
+<!--				</nav>-->
+<?php
+	$temp = $wp_query; $wp_query= null;
+	$wp_query = new WP_Query(); $wp_query->query('showposts=10' . '&paged='.$paged);
+	while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+			<div class="col-xs-12 col-sm-12 col-lg-12">
 				<ul id="js-work-list" class="works-list grid-mode-1">
 					<li class="works-item apps concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/rentme-thumb.png);">
-							<a href="work/rentme/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">RentMe</h2></div>
+						<div class="works-list-inner" href="<?php the_permalink() ?>" title="Переглянути">
+							<a>
+								<?php echo get_the_post_thumbnail($page->ID, 'thumbnail'); ?>
+									<div class="work-title-wrap">
+										<h2 class="work-title" href="<?php the_permalink(); ?>" title="Переглянути">
+											<?php the_title(); ?>
+										</h2>
+									</div>
 							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item apps concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/rastro-thumb.png);">
-							<a href="work/rastro/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Rastro</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item apps concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/mommys-town-thumb.png);">
-							<a href="work/mommys-town/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Mommy&#8217;s Town</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item apps concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/eventcrowd-app-thumb.png);">
-							<a href="work/eventcrowd-app/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Eventcrowd App</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item apps concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/buzzbox-thumb.png);">
-							<a href="work/buzz-box/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Buzz box</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item website concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/moffice-thumb.png);">
-							<a href="work/moffice/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">みんなのオフィス</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item website concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/eventcrowd-web-thumb.png);">
-							<a href="work/eventcrowd-web/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Eventcrowd Web</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item apps concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/decor-quark-thumb.png);">
-							<a href="work/decor-quark/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">DÉCOR QUARK</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item website concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/wakan-organics-thumb.png);">
-							<a href="work/sunaturals-wakan/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Sunaturals Wakan</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
-						</div>
-					</li>
-					<li class="works-item website concept">
-						<div class="works-list-inner" style="background-image: url(http://1st-touch.jp/firsttouch/wp/wp-content/uploads/e-sunaturals-ec-thumb.png);">
-							<a href="work/sunaturals-ec/index.html" data-pjax="true">
-								<div class="work-title-wrap"><h2 class="work-title">Sunaturals EC</h2></div>
-							</a>
-							<h2 class="green-label tri-ltr" data-filter="concept"><p>Concept</p></h2>
 						</div>
 					</li>
 				</ul>
-				<div class="works-next">
-				</div>
+	<?php endwhile; ?>
+
+	<?php if ($paged > 1) { ?>
+
+		<nav id="nav-posts">
+			<div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+			<div class="next"><?php previous_posts_link('Newer Posts &raquo;'); ?></div>
+		</nav>
+
+	<?php } else { ?>
+
+		<nav id="nav-posts">
+			<div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
+		</nav>
+
+	<?php } ?>
+
+	<?php wp_reset_postdata(); ?>
+			</div>
+<!--				<div class="works-next">-->
+<!--				</div>-->
 			</section> <!--/ .content-inner -->
 			<footer class="footer" role="contentinfo">
 				<section class="content-inner">
 					<div class="footer-left">
-						<a href="index.html" class="footer-logo" data-pjax="true"><img src="img/logo/white.svg"></a>
+						<a href="http://localhost:8080/wordpress/" class="footer-logo" data-pjax="true"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_white_small.svg"></a>
 						<div class="footer-info">
 							<p><a href="mailto:hello@1st-touch.jp">hello@1st-touch.jp</a></p>
 							<p><a href="tel:03-6419-7401">03-6419-7401</a></p>
@@ -159,13 +99,13 @@
 					<div class="footer-right">
 						<nav class="fnav" role="navigation">
 							<ul>
-								<li><a class="js-text-split" href="about.html" data-pjax="true">About us</a></li>
-								<li><a class="js-text-split" href="member.html" data-pjax="true">Member</a></li>
-								<li><a class="js-text-split" href="works.html" data-pjax="true">Works</a></li>
+								<li><a class="js-text-split" href="http://localhost:8080/wordpress/about/" data-pjax="true">About us</a></li>
+								<li><a class="js-text-split" href="http://localhost:8080/wordpress/members/" data-pjax="true">Member</a></li>
+								<li><a class="js-text-split" href="http://localhost:8080/wordpress/portfolio/" data-pjax="true">Works</a></li>
 							</ul>
 							<ul>
-								<li><a class="js-text-split" href="careers.html" data-pjax="true">Careers</a></li>
-								<li><a class="js-text-split" href="contact.html" data-pjax="true">Contact</a></li>
+								<li><a class="js-text-split" href="http://localhost:8080/wordpress/careers/" data-pjax="true">Careers</a></li>
+								<li><a class="js-text-split" href="http://localhost:8080/wordpress/contact/" data-pjax="true">Contact</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -179,90 +119,16 @@
 					<div class="bg-border border-4"></div>
 					<div class="bg-border border-5"></div>
 				</div>
-			</div> <!--/ .bg-border-wrap -->			</section> <!--/ .works -->
+			</div> <!--/ .bg-border-wrap -->			
+        </section> <!--/ .works -->
 	</div> <!--/ .wrapper -->
 </main> <!--/ .container -->
-<div id="js-progress-bar" class="progress-bar">
-	<span class="bar"></span>
-</div> <!-- / .progress-bar -->
-<div id="js-loading" class="loading">
-	<div class="loading-logo">
-		<div class="preloader-wrap">
-			<div class="preloader is-loading">
-				<span class="slice"></span>
-				<span class="slice"></span>
-				<span class="slice"></span>
-				<span class="slice"></span>
-				<span class="slice"></span>
-				<span class="slice"></span>
-			</div>
-		</div>
-	</div>
-</div> <!--/ .loading -->
-<nav id="js-menu" class="menu">
-	<div class="menu-inner">
-		<div class="menu-label menu-label-page js-text-split"></div>
-		<div class="menu-label menu-label-close js-text-split">Close</div>
-		<div id="js-menu-btn" class="menu-btn">
-			<span class="line line-1"></span>
-			<span class="line line-2"></span>
-			<span class="line line-3"></span>
-			<span class="line line-4"><i></i></span>
-			<span class="line line-5"><i></i></span>
-			<div id="js-circle-loader" class="circle-loader">
-				<svg class="circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 64 64">
-					<circle class="path" stroke-miterlimit="10" stroke-width="3" fill="none" cx="32" cy="32" r="29"></circle>
-				</svg>
-			</div>
-		</div>
-	</div>
-</nav> <!--/ .menu -->
-<div id="js-gnav-wrap" class="gnav-wrap">
-	<div class="gnav-bg">
-		<div class="gnav-inner">
-			<div class="gnav-content">
-				<h1 class="gnav-logo">
-					<img src="img/logo/black.svg" alt="Tiras Tec">
-					<p>To make new things<br/>like a first penguin.</p>
-				</h1>
-				<nav id="js-gnav" class="gnav" role="navigation">
-					<ul>
-						<li><a class="js-text-split" href="index.html" data-pjax="true">Home</a></li>
-						<li><a class="js-text-split" href="about.html" data-pjax="true">About Us</a></li>
-						<li><a class="js-text-split" href="member.html" data-pjax="true">Member</a></li>
-						<li><a class="js-text-split" href="works.html" data-pjax="true">Works</a></li>
-						<li><a class="js-text-split" href="careers.html" data-pjax="true">Careers</a></li>
-						<li><a class="js-text-split" href="contact.html" data-pjax="true">Contact</a></li>
-						<li><a href="https://www.facebook.com/pages/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%95%E3%82%A1%E3%83%BC%E3%82%B9%E3%83%88%E3%82%BF%E3%83%83%E3%83%81/127045084050374" target="_blank"><span class="icon-facebook"></span></a><a href="https://twitter.com/FirstTouch_Inc" target="_blank" class="none"><span class="icon-twitter"></span></a></li>
-					</ul>
-				</nav>
-				<footer class="copyright"><small>Copyright © 2016 Tiras Tec.</small></footer>
-			</div>
-		</div>
-		<div class="gnav-bg-split split-1"></div>
-		<div class="gnav-bg-split split-2"></div>
-		<div class="gnav-bg-split split-3"></div>
-		<div class="gnav-bg-split split-4"></div>
-	</div>
-	<div id="js-gnav-mask" class="gnav-mask"></div>
-</div> <!--/ .gnav -->
-<div id="js-video-wrapper" class="video-wrapper">
-	<video id="js-video" class="video" loop>
-		<source src="http://1st-touch.jp/firsttouch/wp/wp-content/themes/firsttouch/assets/video/movie.webm">
-		<source src="http://1st-touch.jp/firsttouch/wp/wp-content/themes/firsttouch/assets/video/movie.mp4">
-	</video>
-	<div class="sp-video-poster-wrap">
-		<div class="poster-1"></div>
-		<div class="poster-2"></div>
-	</div>
-	<div class="video-mask"></div>
-</div><!--/ .video -->
 <div id="js-mask" class="mask"></div>
 <div id="js-alert" class="alert">
 	<div class="table">
 		<div class="table-cell">
 			<div class="not-support">
-				<div class="not-support-logo"><img src="img/logo/black.svg" alt="Tiras Tec."></div>
+				<div class="not-support-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_black_small.svg" alt="Tiras Tec."></div>
 				<p>Ваш браузер не підтримує.<br/>Будь ласка відобразити знову оновити браузер до останньої версії.</p>
 			</div>
 		</div>

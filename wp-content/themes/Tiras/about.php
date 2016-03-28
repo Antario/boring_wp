@@ -4,9 +4,6 @@
   */
 ?>
 <?php get_header(); ?>
-<h1 id="js-logo" class="logo" role="banner">
-	<a href="index.html" data-pjax="true"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/white.svg" alt="Tiras Tec"></a>
-</h1>
 <main id="js-container" class="container" role="main">
 	<div id="js-wrapper" class="wrapper page-about">
 		<section id="js-about" class="about">
@@ -15,8 +12,8 @@
 					<div class="table-cell">
 						<div class="hgroup">
 							<span class="subpage-icon icon-diamond"></span>
-							<h1 class="js-text-split">About us</h1>
-							<h2 class="js-text-split">Про FirstTouch</h2>
+							<h1 class="js-text-split">Про нас</h1>
+							<h2 class="js-text-split">Про Tiras Tec</h2>
 						</div>
 					</div>
 					<a data-href="js-point" class="scroll-down"></a>
@@ -46,7 +43,7 @@
 					<div class="content-box-inner">
 						<div class="float-l box box-l w50 pda50 bg-white">
 							<h1><p class="js-text-split">Задоволення в формі</p><p class="js-text-split">Для того, щоб зробити свою власну реалізацію планування</p></h1>
-							<div class="ft-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/black.svg" alt="Tiras Tec"></div>
+							<div class="ft-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_black_small.svg" alt="Tiras Tec"></div>
 							<p class="ft-slogan">Go for it.</p>
 						</div>
 						<div class="float-l box box-r w50 pda50 bg-gray">
@@ -209,7 +206,7 @@
 			<footer class="footer" role="contentinfo">
 				<section class="content-inner">
 					<div class="footer-left">
-						<a href="http://localhost:8080/wordpress/" class="footer-logo" data-pjax="true"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/white.svg"></a>
+						<a href="http://localhost:8080/wordpress/" class="footer-logo" data-pjax="true"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_white_small.svg"></a>
 						<div class="footer-info">
 							<p><a href="mailto:hello@1st-touch.jp">hello@1st-touch.jp</a></p>
 							<p><a href="tel:03-6419-7401">03-6419-7401</a></p>
@@ -234,7 +231,7 @@
 				<div class="table">
 					<div class="table-cell">
 						<div class="not-support">
-							<div class="not-support-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/black.svg" alt="Tiras Tec."></div>
+							<div class="not-support-logo"><img src="<?php echo get_template_directory_uri(); ?>/img/logo/tiras_black_small.svg" alt="Tiras Tec."></div>
 							<p>Ваш браузер не підтримує.<br/>Будь ласка відобразити знову оновити браузер до останньої версії.</p>
 						</div>
 					</div>
