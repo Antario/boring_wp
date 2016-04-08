@@ -7,7 +7,7 @@
 *Version:         1.0
 */
 @charset "utf-8";
-@import url(css/bootstrap.min.css);
+
 *,
 body {
     padding: 0;
@@ -258,6 +258,9 @@ a.works-detail-info-link {
 a.btn::after {
     content: "";
     }
+
+
+/*! sanitize.css (custom) | CC0 Public Domain | github.com/jonathantneal/sanitize.css */
 
 pre,
 textarea {

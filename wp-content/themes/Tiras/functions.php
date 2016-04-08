@@ -6,10 +6,6 @@
 		//Реєстрвція скриптів
 		function custom_script() {
 			$jsPath = get_template_directory_uri().'/js/';
-				wp_register_script( 'modernizr_min', 'https://cdn.jsdelivr.net/modernizr/2.8.3/modernizr.min.js', false, false, false);
-				wp_enqueue_script( 'modernizr_min' );
-				wp_register_script( 'jquery_min', 'https://cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js', false, false, false);
-				wp_enqueue_script( 'jquery_min' );
 				wp_register_script( 'html5shiv_min', 'https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js', false, false, false);
 				wp_enqueue_script( 'html5shiv_min' );
 				wp_register_script( 'respond_min', 'https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js', false, false, false);
